@@ -7,13 +7,15 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sidekiq'
 gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'bootstrap-slider-rails'
+gem "figaro"
+gem "sidekiq"
+gem 'sidekiq_mailer'
 
 group :development, :test do
   gem 'byebug'

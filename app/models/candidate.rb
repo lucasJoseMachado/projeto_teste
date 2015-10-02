@@ -31,22 +31,6 @@ class Candidate
     false
   end
 
-  def front_end_developer?
-    html >= 7 && css >= 7 && javascript >= 7
-  end
-
-  def back_end_developer?
-    python >= 7 && django >= 7
-  end
-
-  def mobile_developer?
-    dev_ios >= 7 || dev_android >= 7
-  end
-
-  def generic_developer?
-    not (front_end_developer? || back_end_developer? || mobile_developer?)
-  end
-
   private
     def sanitize_attributes attributes = {}
       attributes.slice(*SAFE_ATTRIBUTES)

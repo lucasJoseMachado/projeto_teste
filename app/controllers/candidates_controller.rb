@@ -6,8 +6,9 @@ class CandidatesController < ApplicationController
   def create
     @candidate = Candidate.new(candidate_params)
     if @candidate.valid?
-      CandidateFeedback.send_feedback @candidate
-      redirect_to action: :new, notice: 'Cadastro finalizado, verifique seu email'
+      evaluate_candidate = EvaluateCandidate.new(@candidate)
+      evaluate_candidate.send_feedback
+      redirect_to action: :new
     else
       render action: :new
     end
