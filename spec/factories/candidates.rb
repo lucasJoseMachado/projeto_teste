@@ -16,12 +16,14 @@ FactoryGirl.define do
       python 10
     end
 
-    factory :ios_developer do
+    factory :mobile_developer do
       dev_ios 8
     end
 
-    factory :android_developer do
+    factory :multi_specialization_developer do
       dev_android 7
+      django 9
+      python 10
     end
   end
 end
