@@ -2,9 +2,15 @@ pt:
   candidate:
     evaluation_title: "Avaliação"
     knowledge_technologies: "Tecnologias conhecidas"
-
+    developer_type:
+      'front_end': "Front-End"
+      'back_end': "Back-End"
+      'mobile': "Mobile"
   candidate_mailer:
-    developer_type_email.subject: "Assunto default"
-    developer_type_email.content: "Conteúdo default"
+    developer_type_email:
+      subject: "Obrigado por se candidatar"
+      content:
+        with_area: "Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador %{type} entraremos em contato."
+        without_area: "Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador entraremos em contato."
   placeholders:
     email: "nome@exemplo.com"
