@@ -1,23 +1,23 @@
 = simple_form_for @candidate, url: "/candidates" do |form|
   .panel.panel-default
     .panel-heading
-      = "Avaliação"
+      = I18n.t("candidate.evaluation_title")
     .panel-body
       .row.form-group
         .col-xs-6
-          = form.input :name, label: "Nome", required: true
+          = form.input :name, required: true
         .col-xs-6
-          = form.input :email, placeholder: "email@exemplo.com", required: true, as: :email
+          = form.input :email, placeholder: I18n.t("placeholders.email"), required: true, as: :email
       .row
         .col-xs-12
           .panel.panel-default
             .panel-heading
-              = "Conhecimento de tecnologias"
+              = I18n.t("candidate.knowledge_technologies")
             .panel-body
               .row
                 - Candidate.technology_options.each do |technology|
                   .col-xs-6.col-sm-4.col-md-3.form-group
-                    = form.input technology, as: :integer, input_html: {min: 0, max: 10, value: @candidate.send(technology) || 0}
+                    = form.input technology, label: I18n.t("simple_form.labels.candidate.#{technology}"), |
+                      as: :integer, input_html: {min: 0, max: 10, value: @candidate.send(technology) || 0}
     .panel-footer.text-right
-      = form.button :submit, class: "btn btn-primary" do
-        = "Enviar"
+      = form.button :submit, I18n.t("simple_form.labels.candidate.confirm"), class: "btn btn-primary"
