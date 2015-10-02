@@ -1,0 +1,10 @@
+pt:
+  candidate:
+    evaluation_title: "Avaliação"
+    knowledge_technologies: "Tecnologias conhecidas"
+
+  candidate_mailer:
+    developer_type_email.subject: "Assunto default"
+    developer_type_email.content: "Conteúdo default"
+  placeholders:
+    email: "nome@exemplo.com"
