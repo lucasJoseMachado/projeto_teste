@@ -18,6 +18,8 @@ gem "sidekiq"
 gem 'sidekiq_mailer'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'byebug'
   gem "better_errors"
   gem "binding_of_caller"
