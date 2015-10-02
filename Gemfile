@@ -12,7 +12,6 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem 'bootstrap-slider-rails'
 gem "figaro"
 gem "sidekiq"
 gem 'sidekiq_mailer'
@@ -23,11 +22,9 @@ group :development, :test do
   gem 'byebug'
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
   gem "codeclimate-test-reporter", require: nil
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

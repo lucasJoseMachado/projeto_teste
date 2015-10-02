@@ -1,7 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
   include Sidekiq::Mailer
-  sidekiq_options queue: 'default'
+  sidekiq_options queue: "default"
 
-  default from: "lucasmachado.jose@gmail.com"
-  layout 'mailer'
+  default from: ENV["sender_email"]
+  layout "mailer"
 end

@@ -32,4 +32,8 @@ RSpec.describe Candidate, :type => :model do
     candidate = Candidate.new({"haskell" => -5})
     expect(candidate.respond_to? :haskell).to be false
   end
+
+  it "has specific technology options" do
+    expect(Candidate.technology_options).to eq %w(html css javascript python django dev_ios dev_android)
+  end
 end

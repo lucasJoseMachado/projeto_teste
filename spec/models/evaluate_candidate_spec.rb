@@ -21,19 +21,17 @@ RSpec.describe EvaluateCandidate, :type => :model do
       candidate = build(:candidate)
       evaluate_candidate = EvaluateCandidate.new candidate
       evaluate_candidate.send_feedback
-      expect(ActionMailer::Base.deliveries.first.to).to eq [candidate.email]
+      expect(ActionMailer::Base.deliveries.last.to).to eq [candidate.email]
     end
 
     it "send just one feedback to a generic developer" do
       evaluate_candidate = EvaluateCandidate.new build(:candidate)
-      evaluate_candidate.send_feedback
-      pending "testar o envio de email"
+      expect{ evaluate_candidate.send_feedback }.to change{ ActionMailer::Base.deliveries.count }.by(1)
     end
 
     it "just one feedback to a 'one-specialization' developer" do
       evaluate_candidate = EvaluateCandidate.new build(:front_end_developer)
-      evaluate_candidate.send_feedback
-      pending "testar o envio de email"
+      expect{ evaluate_candidate.send_feedback }.to change{ ActionMailer::Base.deliveries.count }.by(1)
     end
 
     it "send multiples feedbacks to a 'multi-specialization' developer" do

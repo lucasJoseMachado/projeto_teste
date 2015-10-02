@@ -45,12 +45,15 @@ RSpec.describe CandidatesController, :type => :controller do
 
       it "send feedback to generic user" do
         post :create, candidate: attributes_for(:candidate)
-        pending "testar o envio de email"
+        front_end = I18n.t("candidate.developer_type.front_end")
+        back_end = I18n.t("candidate.developer_type.back_end")
+        mobile = I18n.t("candidate.developer_type.mobile")
+        expect(ActionMailer::Base.deliveries.last.body.raw_source).not_to match /\s#{front_end}|#{back_end}|#{mobile}\s/
       end
 
       it "send feedback to specialized user" do
         post :create, candidate: attributes_for(:back_end_developer)
-        pending "testar o envio de email"
+        expect(ActionMailer::Base.deliveries.last.body.raw_source).to match /#{I18n.t("candidate.developer_type.back_end")}/
       end
     end
   end

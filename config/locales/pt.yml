@@ -3,9 +3,9 @@ pt:
     evaluation_title: "Avaliação"
     knowledge_technologies: "Tecnologias conhecidas"
     developer_type:
-      'front_end': "Front-End"
-      'back_end': "Back-End"
-      'mobile': "Mobile"
+      front_end: "Front-End"
+      back_end: "Back-End"
+      mobile: "Mobile"
   candidate_mailer:
     developer_type_email:
       subject: "Obrigado por se candidatar"
