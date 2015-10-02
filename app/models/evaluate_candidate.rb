@@ -15,15 +15,23 @@ class EvaluateCandidate
     end
 
     def front_end_developer?
-      true #@candidate.html >= 7 && @candidate.css >= 7 && @candidate.javascript >= 7
+      if @candidate.html.present? && @candidate.css.present? && @candidate.javascript.present?
+        @candidate.html.to_i >= 7 && @candidate.css.to_i >= 7 && @candidate.javascript.to_i >= 7
+      else
+        false
+      end
     end
 
     def back_end_developer?
-      true #@candidate.python >= 7 && @candidate.django >= 7
+      if @candidate.python.present? && @candidate.django.present?
+        @candidate.python.to_i >= 7 && @candidate.django.to_i >= 7
+      else
+        false
+      end
     end
 
     def mobile_developer?
-      true #@candidate.dev_ios >= 7 || @candidate.dev_android >= 7
+      (@candidate.dev_ios.present? && @candidate.dev_ios.to_i >= 7) || (@candidate.dev_android.present? && @candidate.dev_android.to_i >= 7)
     end
 
     def generic_developer?

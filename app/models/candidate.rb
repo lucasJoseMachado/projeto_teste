@@ -6,21 +6,17 @@ class Candidate
   TECHNOLOGY_OPTIONS = %w(html css javascript python django dev_ios dev_android)
   SAFE_ATTRIBUTES = %w(name email) + TECHNOLOGY_OPTIONS
 
-  attr_accessor :name, :email
+  attr_accessor *SAFE_ATTRIBUTES
   validates_presence_of :name, :email
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-
-  TECHNOLOGY_OPTIONS.each do |technology|
-    attr_accessor technology.to_sym
-    validates_numericality_of technology.to_sym, greater_than_or_equal_to: 0, less_than_or_equal_to: 10, only_integer: true, allow_nil: true
-  end
+  validates_numericality_of *TECHNOLOGY_OPTIONS, greater_than_or_equal_to: 0, less_than_or_equal_to: 10, only_integer: true, allow_nil: true
 
   def self.technology_options
     TECHNOLOGY_OPTIONS
   end
 
-  def initialize attributes = {}
-    safe_attributes = sanitize_attributes(attributes)
+  def initialize attributes={}
+    safe_attributes = sanitize_attributes(attributes || {})
     safe_attributes.each do |key, value|
       send("#{key}=", value)
     end
@@ -32,7 +28,7 @@ class Candidate
   end
 
   private
-    def sanitize_attributes attributes = {}
+    def sanitize_attributes attributes={}
       attributes.slice(*SAFE_ATTRIBUTES)
     end
 end
