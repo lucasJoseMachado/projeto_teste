@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lucasJoseMachado/projeto_teste.svg?branch=master)](https://travis-ci.org/lucasJoseMachado/projeto_teste)
+== README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
