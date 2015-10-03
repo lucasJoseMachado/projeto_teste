@@ -36,4 +36,9 @@ RSpec.describe Candidate, :type => :model do
   it "has specific technology options" do
     expect(Candidate.technology_options).to eq %w(html css javascript python django dev_ios dev_android)
   end
+
+  it "act as active record model" do
+    candidate = build(:candidate)
+    expect(candidate).not_to be_persisted
+  end
 end

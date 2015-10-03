@@ -10,7 +10,7 @@ class CandidatesController < ApplicationController
       evaluate_candidate.send_feedback
       redirect_to action: :new
     else
-      render action: :new
+      render :new
     end
   end
 

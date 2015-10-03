@@ -40,7 +40,7 @@ RSpec.describe CandidatesController, :type => :controller do
     describe "with valid params" do
       it "redirect_to new on success" do
         post :create, candidate: attributes_for(:candidate)
-        expect(response).to redirect_to action: :new
+        expect(response).to redirect_to(action: :new)
       end
 
       it "send feedback to generic user" do
