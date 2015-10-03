@@ -4,3 +4,9 @@ rvm:
 addons:
   code_climate:
     repo_token: 85b7cb60626218d95086fdc612836a00bd3d3ec674d640e367133bab623c696f
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  - rackup  # start a Web server
+  - sleep 3 # give Web server some time to bind to sockets, etc
