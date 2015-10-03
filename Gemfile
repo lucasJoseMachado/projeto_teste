@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.2"
 
 gem 'rails', '4.2.3'
 gem 'sass-rails', '~> 5.0'
@@ -15,8 +16,9 @@ gem "figaro"
 gem "sidekiq"
 gem 'sidekiq_mailer'
 
-group :production do
-  gem "rails_12factor" #for heroku
+group :production do #for heroku
+  gem "rails_12factor"
+  gem 'puma'
 end
 
 group :development, :test do
@@ -32,5 +34,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-ruby "2.1.2"
