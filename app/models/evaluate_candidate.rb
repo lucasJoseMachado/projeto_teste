@@ -11,7 +11,7 @@ class EvaluateCandidate
 
   private
     def feedback_by_type developer_type
-      CandidateMailer.developer_type_email(developer_type, @candidate.email).deliver
+      CandidateMailer.delay.developer_type_email(developer_type, @candidate.email)
     end
 
     def front_end_developer?
