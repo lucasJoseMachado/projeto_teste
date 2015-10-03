@@ -1,4 +1,12 @@
 pt:
+  activemodel:
+    errors:
+      models:
+        candidate:
+          attributes:
+            name:
+              blank: "Você precisa informar seu nome para continuar"
+              email: "Você precisa informar seu email para continuar"
   candidate:
     evaluation_title: "Avaliação"
     knowledge_technologies: "Tecnologias conhecidas"
