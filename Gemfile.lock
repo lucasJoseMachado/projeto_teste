@@ -252,6 +252,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.3)
   rails_12factor
+  rake
   rspec-rails
   sass-rails (~> 5.0)
   sidekiq
