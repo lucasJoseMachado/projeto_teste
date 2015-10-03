@@ -254,7 +254,7 @@ DEPENDENCIES
   rails_12factor
   rake
   rspec-rails
-  sass-rails (~> 5.0)
+  sass-rails
   sidekiq
   sidekiq_mailer
   simple_form
