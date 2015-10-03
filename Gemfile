@@ -29,7 +29,7 @@ group :development, :test do
   gem "binding_of_caller"
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
-  gem "codeclimate-test-reporter", require: nil
+  gem "codeclimate-test-reporter", "require" => nil
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
