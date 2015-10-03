@@ -1,8 +1,9 @@
 = simple_form_for @candidate, url: "/candidates" do |form|
   .panel.panel-default
     .panel-heading
-      = I18n.t("candidate.evaluation_title")
+      %strong= I18n.t("candidate.evaluation_title")
     .panel-body
+      %p= I18n.t("candidate.contact_data") + ":"
       .row.form-group
         .col-xs-6
           = form.input :name, required: true
@@ -14,6 +15,7 @@
             .panel-heading
               = I18n.t("candidate.knowledge_technologies")
             .panel-body
+              %p= I18n.t("candidate.knowledge_section_help") + ":"
               .row
                 - Candidate.technology_options.each do |technology|
                   .col-xs-6.col-sm-4.col-md-3.form-group
