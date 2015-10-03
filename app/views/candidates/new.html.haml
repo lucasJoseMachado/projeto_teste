@@ -22,4 +22,4 @@
                     = form.input technology, as: :integer, input_html: {min: 0, max: 10, value: @candidate.send(technology) || 0}, |
                       label: I18n.t("simple_form.labels.candidate.#{technology}")
     .panel-footer.text-right
-      = form.button :submit, I18n.t("simple_form.labels.candidate.confirm"), class: "btn btn-primary"
+      = form.button :submit, I18n.t("simple_form.labels.candidate.confirm"), class: "btn btn-primary", id: 'confirm_button'
