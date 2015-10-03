@@ -15,6 +15,7 @@ gem "figaro"
 gem "sidekiq"
 gem 'sidekiq_mailer'
 gem 'rake'
+gem 'toastr_rails'
 
 group :production do
   gem 'puma'

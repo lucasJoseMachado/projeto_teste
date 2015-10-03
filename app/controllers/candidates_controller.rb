@@ -8,8 +8,10 @@ class CandidatesController < ApplicationController
     if @candidate.valid?
       evaluate_candidate = EvaluateCandidate.new(@candidate)
       evaluate_candidate.send_feedback
+      flash[:notice] = "Obrigado pelo cadastro, por favor verifique o seu email"
       redirect_to action: :new
     else
+      flash[:alert] = "O cadastro não foi finalizado, verifique os erros descritos no formulário"
       render :new
     end
   end
