@@ -1,14 +1,4 @@
 pt:
-  activemodel:
-    errors:
-      models:
-        candidate:
-          attributes:
-            name:
-              blank: "Você precisa informar seu nome"
-            email:
-              blank: "Você precisa informar seu email"
-              invalid: "O formato de email deve seguir o padrão 'nome@exemplo.com'"
   candidate:
     evaluation_title: "Cadastro de candidato para a vaga de desenvolvedor"
     contact_data: "Dados para contato"
@@ -28,3 +18,48 @@ pt:
         without_area: "Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador entraremos em contato."
   placeholders:
     email: "nome@exemplo.com"
+  activemodel:
+    errors:
+      models:
+        candidate:
+          attributes:
+            name:
+              blank: "Você precisa informar seu nome"
+            email:
+              blank: "Você precisa informar seu email"
+              invalid: "O formato de email deve seguir o padrão 'nome@exemplo.com'"
+            html:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            css:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            javascript:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            python:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            django:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            dev_ios:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
+            dev_android:
+              less_than_or_equal_to: "O valor deve ser menor ou igual a 10"
+              greater_than_or_equal_to: "O valor deve ser maior ou igual a 0"
+              not_a_number: "O valor deve ser um número"
+              not_an_integer: "O valor deve ser um número inteiro"
