@@ -19,7 +19,7 @@
               .row
                 - Candidate.technology_options.each do |technology|
                   .col-xs-6.col-sm-4.col-md-3.form-group
-                    = form.input technology, as: :integer, input_html: {min: 0, max: 10, value: @candidate.send(technology) || 0}, |
+                    = form.input technology, collection: (0..10).to_a, selected: @candidate.send(technology) || 0, |
                       label: I18n.t("simple_form.labels.candidate.#{technology}")
     .panel-footer.text-right
       = form.button :submit, I18n.t("simple_form.labels.candidate.confirm"), class: "btn btn-primary", id: 'confirm_button'
