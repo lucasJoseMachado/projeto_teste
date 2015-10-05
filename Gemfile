@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
+gem 'rake'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -9,17 +10,11 @@ gem 'turbolinks'
 gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass'
-gem 'font-awesome-sass'
 gem 'simple_form'
 gem "figaro"
 gem "sidekiq"
 gem 'sidekiq_mailer'
-gem 'rake'
 gem 'toastr_rails'
-
-group :production do
-  gem 'puma'
-end
 
 group :development, :test do
   gem 'rspec-rails'
