@@ -5,9 +5,9 @@
     .panel-body
       %p= I18n.t("candidate.contact_data") + ":"
       .row.form-group
-        .col-xs-6
+        .col-xs-12.col-md-6
           = form.input :name, required: true
-        .col-xs-6
+        .col-xs-12.col-md-6
           = form.input :email, placeholder: I18n.t("placeholders.email"), required: true, as: :email
       .row
         .col-xs-12
@@ -18,7 +18,7 @@
               %p= I18n.t("candidate.knowledge_section_help") + ":"
               .row
                 - Candidate.technology_options.each do |technology|
-                  .col-xs-6.col-sm-4.col-md-3.form-group
+                  .col-xs-12.col-sm-4.col-md-3.form-group
                     = form.input technology, collection: (0..10).to_a, selected: @candidate.send(technology) || 0, |
                       label: I18n.t("simple_form.labels.candidate.#{technology}")
     .panel-footer.text-right
