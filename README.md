@@ -10,7 +10,6 @@ Status do projeto
 # Descrição
 
 * Projeto feito como teste de desenvolvedor web para a empresa Meus Pedidos.
-* Um demo deste projeto pode ser acessado no site http://myapp-testeasd.rhcloud.com/
 
 ---
 
