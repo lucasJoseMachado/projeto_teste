@@ -9,7 +9,7 @@ Status do projeto
 
 # Descrição
 
-* Projeto feito como teste de desenvolvedor web para a empresa Meus Pedidos.
+* Projeto feito como teste de desenvolvedor web para a empresa Meus Pedidos
 
 ---
 
