@@ -21,9 +21,8 @@ Status do projeto
 
 ---
 
-# Variáveis de ambiente
+# Adicione as variáveis de ambiente
 
-## Adicione as variáveis de ambiente:
 * gmail_username - email utilizado como emitente no sistema;
 * gmail_password - senha do email utilizado como emitente no sistema;
 
